@@ -1,0 +1,33 @@
+// Ejercicio 3 codigo en lenguaje de progrmación "Go playground"
+// Primera parte
+package main
+
+import "fmt"
+
+func sumarTresNumeros(num1, num2, num3 int) int {
+	return num1 + num2 + num3
+}
+
+func main() {
+	resultado := sumarTresNumeros(2, 4, 6)
+	fmt.Println(resultado)
+}
+
+//segunda parte
+package main
+
+import "fmt"
+
+type Coche struct {
+    numPuertas int
+}
+
+func (c *Coche) agregarPuerta() {
+    c.numPuertas++
+}
+
+func main() {
+    miCoche := Coche{numPuertas: 3}
+    miCoche.agregarPuerta()
+    fmt.Println(miCoche.numPuertas)
+}
